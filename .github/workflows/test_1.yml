@@ -6,7 +6,17 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Hello, world!"
+      - name: Hello
+        run: echo "Hello, world!"
+
+      - name: Touch file
+        run: touch test.txt
+
+      - name: Set text
+        run: echo "Hello, world!" >> test.txt
+
+      - name: Read file
+        run: cat test.txt
 
   other:
     runs-on: ubuntu-latest
