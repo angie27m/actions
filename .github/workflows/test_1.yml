@@ -8,3 +8,8 @@ jobs:
     steps:
       - run: echo "Hello, world!"
 
+  other:
+    runs-on: ubuntu-latest
+    steps:
+      - name: LS
+        run: ls -al
