@@ -35,3 +35,6 @@ jobs:
 
       - name: prueba3 creada en github
         run: echo "Valor ${{ vars.MY_VAR2 }}"
+
+      - name: secret creado en github
+        run: echo "Secret ${{ secrets.MY_SECRET }}"
