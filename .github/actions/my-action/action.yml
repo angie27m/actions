@@ -12,5 +12,5 @@ runs:
 
   steps:
     - name: Hola mundo
-      run: echo "print {{inputs.message}}"
+      run: echo "print: ${{ inputs.message }}"
       shell: bash
