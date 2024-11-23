@@ -1,6 +1,9 @@
 name: Ejemplo de Composite Action
 on:
-  - push
+  push:
+    branches:
+      - master
+
 jobs:
   say-hello:
     runs-on: ubuntu-latest
@@ -10,7 +13,13 @@ jobs:
         env:
           MYSQL_ROOT_PASSWORD: example
         ports:
-          - "3306": 3306
-    steps:
+          - 3306:3306
+
+      redis:
+        image: redis
+        ports:
+          - 6379:6379
+
+    steps: 
       - name: prueba
         run: ls
