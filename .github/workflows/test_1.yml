@@ -34,6 +34,8 @@ jobs:
 
       - name: LS
         uses: ././.github/actions/my-action
+        with: 
+          message: "Custom message"
 
       - name: Setup Node.js environment
         uses: actions/setup-node@v4.1.0
