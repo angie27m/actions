@@ -7,6 +7,10 @@ on:
 jobs:
   say-hello:
     runs-on: ubuntu-latest
+
+    env:
+      MY_VAR: Mi variable de entorno
+
     services:
       mysql:
         image: mysql:5.7
@@ -22,4 +26,4 @@ jobs:
 
     steps: 
       - name: prueba
-        run: ls
+        run: echo "Valor $MY_VAR"
