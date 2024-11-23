@@ -29,11 +29,11 @@ jobs:
     runs-on: ubuntu-latest
     needs: test
     steps:
-      - name: Checkout
+      - name: Checkout code
         uses: actions/checkout@v4.2.2            
 
       - name: LS
-        run: ls -al
+        uses: ././.github/actions/my-action
 
       - name: Setup Node.js environment
         uses: actions/setup-node@v4.1.0
@@ -43,9 +43,6 @@ jobs:
       - name: Node version
         run: node -v
             
-      - name: Install
-        run: npm install
-
       - name: PHP
         uses: shivammathur/setup-php@v2
         with:
