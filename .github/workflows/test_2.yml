@@ -32,3 +32,6 @@ jobs:
         env:
           STEP_MY_VAR: Nueva variable
         run: echo "Valor $STEP_MY_VAR"
+
+      - name: prueba3 creada en github
+        run: echo "Valor ${{ vars.MY_VAR2 }}"
